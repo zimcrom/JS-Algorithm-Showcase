@@ -14,6 +14,8 @@ function checkString() {
   function convertBackwards(str) {
     let backwardsString = str.split("").reverse().join("");
     console.log("The user string backwards is: " + backwardsString);
+    var box1El = document.getElementById('box1');
+    box1El.innerHTML = backwardsString;
   }
   convertBackwards(userString);
 
@@ -21,6 +23,8 @@ function checkString() {
   function alphabetizedString(str) {
     let alphString = str.split("").sort().join("");
     console.log("The user string alphabetized is: " + alphString);
+    var box2El = document.getElementById('box2');
+    box2El.innerHTML = alphString;
   }
   alphabetizedString(userString);
 
@@ -32,8 +36,12 @@ function checkString() {
     console.log("revRemSpace is: " + revRemSpace);
     if (revRemSpace === remSpace) {
       console.log("Yep, that's a palindrome");
+      var box3El = document.getElementById('box3');
+      box3El.innerHTML = "Yep, that's a palindrome";
     } else {
       console.log("That's not a palindrome");
+      var box3El = document.getElementById('box3');
+      box3El.innerHTML = "That's not a palindrome";
     }
   }
   isPalindrome(userString);
@@ -41,3 +49,8 @@ function checkString() {
 // Now to select the button
 let btn = document.getElementById("startBtn");
 btn.addEventListener("click", checkString);
+
+// var newEl = document.createElement('div');
+// newEl.className = "event-list";
+// newEl.innerHTML = filteredDates[i].name;
+// list.appendChild(newEl);
